@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script type="text/javascript">
         $(function () {
+            $("#btn").click(function () {
+                $("#mb").menubutton('disable');
+            })
             $(document).contextmenu(function (e) {
                 $("#mm").menu('show',{
                     top:e.pageY,
@@ -40,5 +43,6 @@
     <div data-options="iconCls:'icon-remove'">Delete</div>
     <div>Select All</div>
 </div>
+<input type="button" id="btn"/>
 </body>
 </html>
