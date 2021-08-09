@@ -12,17 +12,11 @@
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script type="text/javascript">
         $(function () {
-            $("#btn").click(function () {
-                $("#mb").menubutton('disable')
-            })
-            $(document).contextmenu(function (e) {
-                $("#mm").menu('show',{
-                    top:e.pageY,
-                    left:e.pageX
-                });
-                return false;
-            })
-
+           $("#mb").menubutton({
+               menu:"#mm",
+               hasDownArrow:true,
+               plain:true
+           });
         })
         function test(item) {
             console.log(item.target);
@@ -30,8 +24,7 @@
     </script>
 </head>
 <body>
-<a href="javascript:void(0)" id="mb" class="easyui-menubutton"
-   data-options="menu:'#mm',iconCls:'icon-edit',plain:false">Edit</a>
+<a href="javascript:void(0)" id="mb" >按钮</a>
 <div id="mm" style="width:150px;">
     <div data-options="iconCls:'icon-undo'">Undo</div>
     <div data-options="iconCls:'icon-redo'">Redo</div>
