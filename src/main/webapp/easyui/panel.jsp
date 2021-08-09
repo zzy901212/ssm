@@ -11,36 +11,21 @@
     <script type="text/javascript" src="/ssm/static/easyui/jquery.easyui.min.js"></script>
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script type="text/javascript">
-     /*   $(function () {
-            $(document).contextmenu(function (e) {
-                $("#mm").menu('show',{
-                    top:e.pageY,
-                    left:e.pageX
-                });
-                return false;
+        $(function () {
+            $("#p").panel({
+                href:'/ssm/easyui/menu1.jsp'
             })
-
         })
-        function test(item) {
-            console.log(item.target);
-        }*/
+
     </script>
 </head>
 <body>
-<div id="mm" class="easyui-menu" data-options="hideOnUnhover:false,onClick:test" >
-    <div data-options="iconCls:'icon-save'" >添加</div>
-    <div data-options="iconCls:'icon-add'">复制</div>
-    <div data-options="iconCls:'icon-remove'">修改</div>
-    <div class="menu-sep"></div>
-    <div data-options="iconCls:'icon-edit'">删除
-        <div>
-            <div data-options="iconCls:'icon-save'">二级</div>
-            <div>二级·1</div>
-            <div>二级·2</div>
-        </div>
-    </div>
-
+<div id="p" class="easyui-panel" title="My Panel"
+     style="width:500px;height:150px;padding:10px;background:#fafafa;"
+     data-options="iconCls:'icon-save',closable:true,
+                collapsible:true,minimizable:true,maximizable:true">
+    <p>panel content.</p>
+    <p>panel content.</p>
 </div>
-
 </body>
 </html>

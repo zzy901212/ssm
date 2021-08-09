@@ -12,14 +12,19 @@
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script type="text/javascript">
         $(function () {
-
+            $("#btn").click(function () {
+                $("#sbtn1").switchbutton({
+                    checked: true
+                })
+            })
 
         })
 
     </script>
 </head>
 <body>
-<input class="easyui-switchbutton" checked>
-<input class="easyui-switchbutton" data-options="onText:'Yes',offText:'No'">
+<input class="easyui-switchbutton" id="sbtn1">
+<input class="easyui-switchbutton" data-options="onText:'芝麻开门',offText:'给老子闭上'">
+    <button id="btn">点我关闭</button>
 </body>
 </html>
