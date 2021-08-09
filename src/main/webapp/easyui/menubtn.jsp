@@ -1,0 +1,44 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" isELIgnored="false" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/ssm/static/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/ssm/static/easyui/themes/icon.css">
+    <script type="text/javascript" src="/ssm/static/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/ssm/static/easyui/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <script type="text/javascript">
+        $(function () {
+            $(document).contextmenu(function (e) {
+                $("#mm").menu('show',{
+                    top:e.pageY,
+                    left:e.pageX
+                });
+                return false;
+            })
+
+        })
+        function test(item) {
+            console.log(item.target);
+        }
+    </script>
+</head>
+<body>
+<a href="javascript:void(0)" id="mb" class="easyui-menubutton"
+   data-options="menu:'#mm',iconCls:'icon-edit',plain:false">Edit</a>
+<div id="mm" style="width:150px;">
+    <div data-options="iconCls:'icon-undo'">Undo</div>
+    <div data-options="iconCls:'icon-redo'">Redo</div>
+    <div class="menu-sep"></div>
+    <div>Cut</div>
+    <div>Copy</div>
+    <div>Paste</div>
+    <div class="menu-sep"></div>
+    <div data-options="iconCls:'icon-remove'">Delete</div>
+    <div>Select All</div>
+</div>
+</body>
+</html>

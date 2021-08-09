@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="1 seconds">
+
+    <contextName>logback</contextName>
+
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- <filter class="com.example.logback.filter.MyFilter" /> -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>[%p] %d{yyyy-MM-dd HH:mm:ss} %m %n</pattern>
+
+        </layout>
+
+    </appender>
+
+    <root level="ERROR">
+        <appender-ref ref="stdout"/>
+
+    </root>
+    <logger name="com.zzy.dao" level="debug"></logger>
+</configuration>

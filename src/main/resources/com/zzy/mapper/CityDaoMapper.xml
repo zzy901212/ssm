@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzy.dao.CityDao">
+
+    <select id="queryCitysByProvinceId" resultType="city">
+       select id,code,name from city where provinceid=#{provinceid}
+    </select>
+
+
+</mapper>

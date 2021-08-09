@@ -1,0 +1,35 @@
+server:
+  context-path: /ssm
+  port: 8989
+  tomcat:
+    uri-encoding: UTF-8
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+    static-path-pattern: /static/**
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/sboot
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    name: sboot
+  resources:
+    static-locations: classpath:/static/
+
+
+mybatis:
+  mapper-locations: classpath*:com/zzy/mapper/*Mapper.xml
+  type-aliases-package: com.zzy.entity
