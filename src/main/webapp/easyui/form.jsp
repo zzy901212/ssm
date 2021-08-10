@@ -14,21 +14,29 @@
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script type="text/javascript">
         $(function () {
+            $("#email").validatebox('disable',{
+                validType:'email',
+                required:true,
+
+            });
 
 
 
         })
+        function test(valid) {
+            console.log(valid);
+        }
     </script>
 </head>
 <body>
 <form id="ff" method="post">
     <div>
         <label for="name">Name:</label>
-        <input class="easyui-validatebox" id="name" type="text" name="name" data-options="required:true,validType:'uname'" />
+        <input class="easyui-validatebox" id="name" type="text" name="name" data-options="onValidate:test, required:true,validType:'uname'" />
     </div>
     <div>
         <label for="ff">Email:</label>
-        <input class="easyui-validatebox" type="text" id="email" name="email" data-options="validType:'email'" />
+        <input class="easyui-validatebox" type="text" id="email" name="email"  />
     </div>
 
 </form>
